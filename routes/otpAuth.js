@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
 const nodemailer = require('nodemailer');
-const user = require('../models/user');
+const User = require('../models/User');
 const logger = require('../utils/logger'); // use your logger config
 const router = express.Router();
 
