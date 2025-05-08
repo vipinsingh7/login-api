@@ -6,6 +6,7 @@ const auth = require('../middleware/auth');
 const User = require('../models/user');
 
 const multer = require('multer');
+const winston = require('winston')
 
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
@@ -15,6 +16,7 @@ const JWT_SECRET = "VipinSingh";
 
 const nodemailer = require('nodemailer');
 const crypto = require('crypto');
+
 
 // Register
 router.post('/register', async (req, res) => {
@@ -190,7 +192,7 @@ router.post('/forgot-password', async (req, res) => {
 });
 
 module.exports = router;
-const winston = require('winston');
+// const winston = require('winston');
 
 const logger = winston.createLogger({
   level: 'info',
@@ -431,3 +433,5 @@ router.post('/forgot-password', async (req, res) => {
     res.status(500).json({ error: 'Server error' });
   }
 });logger.info('Server started successfully');
+
+// module.exports = router;
