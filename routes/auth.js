@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const auth = require('../middleware/auth');
-const User = require('../models/user');
+const user = require('../models/user');
 
 const multer = require('multer');
 const winston = require('winston')
